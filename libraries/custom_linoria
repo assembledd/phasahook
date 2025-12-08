@@ -3064,7 +3064,7 @@ function Library:CreateWindow(...)
 		    local Offset = TabListLayout.CellPadding.X.Offset
 			local Width = TabArea.AbsoluteSize.X - Offset * (c - 1)
 			
-			TabListLayout.CellSize = UDim2.new(Width / TabArea.AbsoluteSize.X / c, 0, 0, 20)
+			TabListLayout.CellSize = UDim2.new(Width / TabArea.AbsoluteSize.X / c, 0, 0, TabListLayout.CellSize.Y.Offset)
 		end
 	end
 	
