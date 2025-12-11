@@ -22,7 +22,7 @@ function font_manager.register(name, weight, style, asset)
 end
     
 function font_manager.create(name, type, asset)
-    return Font.new(font_manager:register(name, 100, type, {
+    return Font.new(font_manager.register(name, 100, type, {
         id = (name .. ".ttf"),
         font = crypt.base64.decode(asset)
     }))
