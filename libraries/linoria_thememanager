@@ -4,7 +4,7 @@ end
 
 local httpService = RefService('HttpService')
 local ThemeManager = {} do
-	ThemeManager.Folder = 'moonlight'
+	ThemeManager.Folder = cfgfile or 'moonlight.win'
 	task.wait(1)
 	ThemeManager.Library = nil
 	ThemeManager.BuiltInThemes = {
