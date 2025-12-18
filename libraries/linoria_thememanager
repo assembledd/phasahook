@@ -4,7 +4,7 @@ end
 
 local httpService = RefService('HttpService')
 local ThemeManager = {} do
-	ThemeManager.Folder = cfgfile or "phasahook"
+	ThemeManager.Folder = cfgfile or "moonlight.win"
 	task.wait(1) -- let the frickin shi write
 	
 	-- if not isfolder(ThemeManager.Folder) then makefolder(ThemeManager.Folder) end
