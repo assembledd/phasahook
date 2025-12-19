@@ -2,9 +2,9 @@
 modded by assembledd
 new:
   3 groupboxes instead of 2
+  toggles turn off on unload
   watermark is stuck on the bottom ( i like it :) )
   everything else from the previous one
-  
 ]]--
 
 local RefService = function(Service)
@@ -389,6 +389,8 @@ function Library:GiveSignal(Signal)
 end
 
 function Library:Unload()
+	for i,v in Toggles do v:SetValue(false) end
+
     -- Unload all of the signals
     for Idx = #Library.Signals, 1, -1 do
         local Connection = table.remove(Library.Signals, Idx)
