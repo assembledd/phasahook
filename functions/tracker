@@ -1,0 +1,6 @@
+local env = getgenv and getgenv() or _G
+if env.tracker then
+    pcall(function() game:GetService("Players").LocalPlayer:Kick("Already Injected.\nPlease Rejoin!") end)
+    task.wait(9e9)
+end
+env.tracker = 1
