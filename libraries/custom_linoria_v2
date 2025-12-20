@@ -13,7 +13,7 @@ end
 
 local InputService = RefService('UserInputService');
 local TextService = RefService('TextService');
-local CoreGui = RefService('CoreGui');
+local CoreGui = gethui and gethui() or RefService('CoreGui');
 local Teams = RefService('Teams');
 local Players = RefService('Players');
 local RunService = RefService('RunService')
