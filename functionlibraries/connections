@@ -1,0 +1,23 @@
+local utility = {events = {}}
+
+function utility.newconnection(name)
+    utility.events[name] = {count=0}
+end
+
+function utility.callconnection(name)
+    utility.events[name].count += 1
+end
+
+function utility.changedconnection(name, func)
+    task.spawn(function()
+        local a = utility.events[name].count
+        while task.wait() do
+            if utility.events[name].count ~= a then
+                func()
+            end
+            a = utility.events[name].count
+        end
+    end)
+end
+
+return utility
