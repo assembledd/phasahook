@@ -1,3 +1,5 @@
+if script_key then getgenv().script_key = script_key end
+
 local creatorid = game.CreatorId
 local localplayer = cloneref(game:GetService("Players").LocalPlayer)
 local url = "https://raw.githubusercontent.com/assembledd/lua/refs/heads/main/scripts/"
